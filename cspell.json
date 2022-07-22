@@ -1,0 +1,5 @@
+{
+  "ignorePaths": ["**/node_modules/**"],
+
+  "words": ["mobx", "valtio"]
+}
