@@ -1,10 +1,49 @@
 # いろんな state 管理をためしてみる
 
+## npm trends
+
+https://npmtrends.com/Zustand-vs-jotai-vs-mobx-vs-react-redux-vs-recoil-vs-redux-vs-valtio-vs-xstate-vs-zustand
+
+## 比較めも
+
 - mobx
+
+  - ref
+    - https://mobx.js.org/README.html
+  - pros
+    - mutable 操作
+    - 分割 store
+  - cons
+    - コンポーネントで observe するために hoc する必要がある
+    - v4 -> v6 のような破壊的変更がきになる
+
 - context api
 - valtio
 - recoil
+
+  - ref
+
+    - https://recoiljs.org/
+    - https://nulab.com/ja/blog/nulab/recoil-example/
+    - https://engineering.linecorp.com/ja/blog/line-sec-frontend-using-recoil-to-get-a-safe-and-comfortable-state-management/
+    - https://zenn.dev/nekoniki/scraps/e2ad516d7da7d3
+
+  - ## pros
+    - hooks から状態を subscribe できるためコンポーネントへの影響なし
+  - cons
+    - 設計でカバーできるが、直接 atom をいじれてしまう危険性
+
 - jotai
+  - ref
+    - https://zenn.dev/kkeeth/articles/studying-jotai-library
+  - pros
+    - 軽い
+- xstate
+
+  - redux みたい
+
+- Zustand
+  - valtio みたい
 
 ## メモなど
 

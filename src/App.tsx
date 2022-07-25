@@ -1,6 +1,6 @@
 import { css } from '@emotion/css';
 import { Routes, Route, Link } from 'react-router-dom';
-import { UseHooksApp } from './pages/hooks';
+import { UseContextApp } from './pages/context';
 import { UseMobxApp } from './pages/mobx';
 import { UseValtioApp } from './pages/valtio';
 import { gutter } from './utils/Style';
@@ -13,7 +13,7 @@ function Home() {
           <Link to="mobx">mobx</Link>
         </li>
         <li>
-          <Link to="hooks">hooks</Link>
+          <Link to="context">context API</Link>
         </li>
         <li>
           <Link to="valtio">valtio</Link>
@@ -30,7 +30,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="mobx/" element={<UseMobxApp />} />
-        <Route path="hooks/" element={<UseHooksApp />} />
+        <Route path="context/" element={<UseContextApp />} />
         <Route path="valtio/" element={<UseValtioApp />} />
       </Routes>
     </div>
