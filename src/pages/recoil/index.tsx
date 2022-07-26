@@ -1,34 +1,26 @@
 import { css } from '@emotion/css';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-
+import { RecoilRoot } from 'recoil';
 import { CodeBlock } from '../../components/CodeBlock';
+import { RecoilApp } from './App';
 
-import { ValtioApp } from './App';
-import { CounterStoreContext, createCounterStore } from './store/CounterStore';
-import { PhotoStoreContext, createPhotoStore } from './store/PhotoStore';
-
-export const UseValtioApp = () => {
+export const UseRecoilApp = () => {
   const [content, setContent] = useState('');
   useEffect(() => {
-    fetch('markdown/valtio.md')
+    fetch('markdown/recoil.md')
       .then((res) => res.text())
       .then((text) => setContent(text));
   }, []);
-
-  const counterStore = createCounterStore();
-  const photoStore = createPhotoStore();
 
   return (
     <>
       <h1 className={styleTitle}>use recoil app</h1>
       <div className={styleBase}>
         <div className={styleApp}>
-          <PhotoStoreContext.Provider value={photoStore}>
-            <CounterStoreContext.Provider value={counterStore}>
-              <ValtioApp />
-            </CounterStoreContext.Provider>
-          </PhotoStoreContext.Provider>
+          <RecoilRoot>
+            <RecoilApp />
+          </RecoilRoot>
         </div>
         <div className={styleCode}>
           <ReactMarkdown

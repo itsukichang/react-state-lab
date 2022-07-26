@@ -1,4 +1,4 @@
-## Mobx Store
+## Context API Store
 
 ### app.tsx
 
